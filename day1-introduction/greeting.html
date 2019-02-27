@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> greeting</title>
+    </head>
+
+    <body>
+
+
+        <script>
+            var name=prompt("Enter your name");
+            console.log("welcome to the guess name"+name);
+            var targetNumber=Math.ceil(Math.random()*100);
+            console.log(targetNumber);
+            var playerGuess=0;
+            var maxGuess=10;
+            while(playerGuess<maxGuess){
+                var guess=parseInt(prompt("guess my number"));
+                console.log(guess);
+                console.log(typeof guess);
+                if(guess <targetNumber){
+                    console.log("oops!!!your guess was low");
+                } else if (guess>targetNumber){ 
+                    console.log("oops!!!your guess was high");
+                } else if (guess===targetNumber){
+                    console.log("good job,you got the number");
+                    break;
+                }
+                playerGuess++;
+            }
+            console.log("im outside the loop"); 
+
+
+
+            </script>
+            </body>
+            </html>
